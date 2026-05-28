@@ -15,8 +15,20 @@ export default function App() {
   const { isChecking, checkError, availableUpdate } = Updates.useUpdates();
 
   useEffect(() => {
-    Updates.checkForUpdateAsync().catch(() => {});
+    console.log("[updates] runtimeVersion:", Updates.runtimeVersion);
+    console.log("[updates] channel:", Updates.channel);
+    Updates.checkForUpdateAsync()
+      .then((result) => console.log("[updates] check result:", JSON.stringify(result)))
+      .catch((e) => console.log("[updates] check error:", e));
   }, []);
+
+  useEffect(() => {
+    console.log("[updates] state:", {
+      isChecking,
+      checkError: checkError?.message ?? null,
+      availableUpdate: availableUpdate?.manifest?.id ?? null,
+    });
+  }, [isChecking, checkError, availableUpdate]);
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
