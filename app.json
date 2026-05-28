@@ -8,7 +8,10 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dev.brianogilvie.expoNsurlCloudflareRepro"
+      "bundleIdentifier": "dev.brianogilvie.expoNsurlCloudflareRepro",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
