@@ -6,6 +6,12 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/295faa57-df6a-4a88-9094-c828453d3da9"
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dev.brianogilvie.expoNsurlCloudflareRepro",
