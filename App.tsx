@@ -34,15 +34,21 @@ export default function App() {
       <Text style={styles.result}>{result}</Text>
       <Text style={styles.note}>
         Expected: 200 or 400 (reaches EAS server){"\n"}
-        On iOS device: 403 (Cloudflare blocks NSURLSession)
+        Actual on standalone iOS build: 403 (Cloudflare blocks NSURLSession)
       </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 },
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 24,
+    backgroundColor: "#fff",
+  },
   label: { fontSize: 14, color: "#666", marginBottom: 8 },
-  result: { fontSize: 32, fontWeight: "bold", marginBottom: 24 },
+  result: { fontSize: 32, fontWeight: "bold", marginBottom: 24, color: "#000" },
   note: { fontSize: 12, color: "#999", textAlign: "center", lineHeight: 20 },
 });
